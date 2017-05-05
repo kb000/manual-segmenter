@@ -10,7 +10,13 @@
         <Button x:Name="button" Content="Open" HorizontalAlignment="Left" Margin="135,13,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
         <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="foo.jpg" VerticalAlignment="Top" Width="120"/>
         <!--<Image Source="C:\\Users\\keburek\\Desktop\\to_kevin\\photos\\20150808_141923.jpg" Margin="0,38,0,0.5" />-->
-        <Image Source="{Binding sourcePath,Mode=OneWay}" Margin="0,38,0,0.5"
-               x:Name="mainImage"/>
+        <ScrollViewer Margin="0,38,0,0.5"
+                      x:Name="imageScrollViewer"
+                      HorizontalScrollBarVisibility="Visible"
+                      VerticalScrollBarVisibility="Visible">
+            <Image
+               x:Name="mainImage"
+               Stretch="None" />
+        </ScrollViewer>
     </Grid>
 </Window>

@@ -51,6 +51,9 @@ namespace Segmenter
                 string filename = dlg.FileName;
                 textBox1.Text = filename;
                 mainImage.Source = new BitmapImage(new Uri(filename));
+                //imageScrollViewer.MaxHeight = mainImage.Source.Height;
+                //imageScrollViewer.MaxWidth = mainImage.Source.Width;
+                imageScrollViewer.UpdateLayout();
             }
         }
     }
