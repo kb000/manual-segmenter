@@ -5,18 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Segmenter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525"
+        KeyDown="Window_KeyDown">
     <Grid>
-        <Button x:Name="button" Content="Open" HorizontalAlignment="Left" Margin="135,13,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="foo.jpg" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="button" Content="Open" HorizontalAlignment="Left" Margin="435,13,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="140,10,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="120"/>
         <!--<Image Source="C:\\Users\\keburek\\Desktop\\to_kevin\\photos\\20150808_141923.jpg" Margin="0,38,0,0.5" />-->
         <ScrollViewer Margin="0,38,0,0.5"
                       x:Name="imageScrollViewer"
                       HorizontalScrollBarVisibility="Visible"
                       VerticalScrollBarVisibility="Visible">
+            <Grid>
             <Image
                x:Name="mainImage"
-               Stretch="None" />
+               Stretch="None"
+                MouseDown="mainImage_MouseDown"/>
+            <Canvas
+                x:Name="mainCanvas">
+            </Canvas>
+            </Grid>
         </ScrollViewer>
     </Grid>
 </Window>
